@@ -4,18 +4,21 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-  --mochi-pink: #F6A7B5;
-  --mochi-purple: #C9C3E6;
-  --mochi-green: #CFE8D6;
-  --mochi-pink-soft: #FEF0F3;
-  --mochi-purple-soft: #F4F2FB;
-  --mochi-green-soft: #F0F8F3;
+  --foreground: #0a0a0a;
+  --mochi-pink: #E91E63;
+  --mochi-purple: #9C27B0;
+  --mochi-green: #4CAF50;
+  --mochi-pink-soft: #FCE4EC;
+  --mochi-purple-soft: #F3E5F5;
+  --mochi-green-soft: #E8F5E9;
 }
 
 .dark {
   --background: #0a0a0a;
-  --foreground: #ededed;
+  --foreground: #fafafa;
+  --mochi-pink: #F48FB1;
+  --mochi-purple: #CE93D8;
+  --mochi-green: #A5D6A7;
   --mochi-pink-soft: #2a1218;
   --mochi-purple-soft: #18162a;
   --mochi-green-soft: #111e16;
