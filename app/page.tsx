@@ -30,6 +30,24 @@ const philosophyItems = [
   { word: "Sweet", desc: "simple, elegant, and enjoyable", color: "var(--mochi-pink)", bg: "var(--mochi-pink-soft)" },
 ];
 
+const teamMembers = [
+  {
+    name: "Ariz Kamizuki",
+    role: "Owner , Core Developer",
+    desc: "Architecting the filesystem and init system.",
+  },
+  {
+    name: "Yuuma Hanazawa",
+    role: "Website Developer",
+    desc: "Building the website and documentation.",
+  },
+  {
+    name: "Luna Hoshigure",
+    role: "Tester , Developer",
+    desc: "Testing and developing new features.",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -37,7 +55,7 @@ export default function Home() {
 
       <main className="pt-14">
         {/* Hero */}
-        <section className="max-w-5xl mx-auto px-6 py-24 md:py-36">
+        <section className="max-w-5xl mx-auto px-6 py-24 md:py-36" data-aos="fade-down">
           <span className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest px-2.5 py-1 rounded-full mb-4"
             style={{ background: "var(--mochi-pink-soft)", color: "var(--mochi-pink)" }}>
             Rolling Linux Distribution
@@ -54,7 +72,7 @@ export default function Home() {
         <div className="border-t border-zinc-200 dark:border-zinc-800" />
 
         {/* What is MochiLinux */}
-        <section id="what-is-mochilinux" className="max-w-5xl mx-auto px-6 py-20">
+        <section id="what-is-mochilinux" className="max-w-5xl mx-auto px-6 py-20" data-aos="fade-down">
           <h2 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-100 mb-4">
             What is MochiLinux?
           </h2>
@@ -75,7 +93,7 @@ export default function Home() {
         <div className="border-t border-zinc-200 dark:border-zinc-800" />
 
         {/* Application Model */}
-        <section id="application-model" className="max-w-5xl mx-auto px-6 py-20">
+        <section id="application-model" className="max-w-5xl mx-auto px-6 py-20" data-aos="fade-down">
           <h2 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-100 mb-4">
             Application Model
           </h2>
@@ -99,7 +117,7 @@ export default function Home() {
         <div className="border-t border-zinc-200 dark:border-zinc-800" />
 
         {/* CLI Applications */}
-        <section id="cli-applications" className="max-w-5xl mx-auto px-6 py-20">
+        <section id="cli-applications" className="max-w-5xl mx-auto px-6 py-20" data-aos="fade-down">
           <h2 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-100 mb-4">
             CLI Applications
           </h2>
@@ -116,7 +134,7 @@ export default function Home() {
         <div className="border-t border-zinc-200 dark:border-zinc-800" />
 
         {/* Custom Init System */}
-        <section id="custom-init-system" className="max-w-5xl mx-auto px-6 py-20">
+        <section id="custom-init-system" className="max-w-5xl mx-auto px-6 py-20" data-aos="fade-down">
           <h2 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-100 mb-4">
             Custom Init System
           </h2>
@@ -139,7 +157,7 @@ export default function Home() {
         <div className="border-t border-zinc-200 dark:border-zinc-800" />
 
         {/* Why MochiLinux */}
-        <section id="why-mochilinux" className="max-w-5xl mx-auto px-6 py-20">
+        <section id="why-mochilinux" className="max-w-5xl mx-auto px-6 py-20" data-aos="fade-down">
           <h2 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-100 mb-10">
             Why MochiLinux?
           </h2>
@@ -163,7 +181,7 @@ export default function Home() {
         <div className="border-t border-zinc-200 dark:border-zinc-800" />
 
         {/* Philosophy */}
-        <section id="philosophy" className="max-w-5xl mx-auto px-6 py-20">
+        <section id="philosophy" className="max-w-5xl mx-auto px-6 py-20" data-aos="fade-down">
           <h2 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-100 mb-10">
             Philosophy
           </h2>
@@ -176,6 +194,38 @@ export default function Home() {
                 </p>
                 <p className="text-sm text-zinc-500 dark:text-zinc-400">
                   {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <div className="border-t border-zinc-200 dark:border-zinc-800" />
+
+        {/* Team */}
+        <section id="team" className="max-w-5xl mx-auto px-6 py-20" data-aos="fade-down">
+          <h2 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-100 mb-10">
+            Team
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {teamMembers.map((member) => (
+              <div
+                key={member.name}
+                className="border border-zinc-200 dark:border-zinc-800 rounded-xl p-6 hover:border-[var(--mochi-pink)] transition-colors"
+              >
+                <div className="w-16 h-16 rounded-full bg-zinc-200 dark:bg-zinc-800 mb-4 flex items-center justify-center">
+                  <span className="text-xl font-semibold text-zinc-600 dark:text-zinc-300">
+                    {member.name.charAt(0)}
+                  </span>
+                </div>
+                <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 mb-1">
+                  {member.name}
+                </h3>
+                <p className="text-xs text-[var(--mochi-purple)] mb-2">
+                  {member.role}
+                </p>
+                <p className="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                  {member.desc}
                 </p>
               </div>
             ))}
