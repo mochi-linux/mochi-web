@@ -14,7 +14,7 @@ const links = [
   { label: "Download", href: "/download" },
   { label: "What is it?", href: "/#what-is-mochilinux" },
   { label: "App Model", href: "/#application-model" },
-  { label: "Team", href: "/team" },
+  { label: "Team", href: "/#team" },
 ];
 
 export default function Nav() {
